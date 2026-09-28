@@ -47,10 +47,11 @@ background:#e6f5ec}.movement.down{color:var(--down);background:#fdeaea}
 margin:0 0 18px}.stats-grid .panel h2{margin:0;padding:14px 16px;
 font-size:17px;border-bottom:1px solid var(--line)}.stats-grid table th,
 .stats-grid table td{padding:9px 13px}.stats-grid table th{text-align:left}
-.tournament-players th.group{padding-top:10px;padding-bottom:10px;text-align:center;
+.tournament-players th.group,.tournament-days th.group{padding-top:10px;padding-bottom:10px;text-align:center;
 border-left:2px solid #b8c7d8;border-bottom:2px solid #9db1c6;background:#e8f4f1;
 color:#28675d}.tournament-players th.group-start,
-.tournament-players td.group-start{border-left:2px solid #b8c7d8}
+.tournament-players td.group-start,.tournament-days th.group-start,
+.tournament-days td.group-start{border-left:2px solid #b8c7d8}
 .tabs{display:flex;gap:8px;margin:0 0 18px}.tabs a{padding:8px 14px;
 border:1px solid var(--line);background:#fff;border-radius:7px;text-decoration:none}
 .tabs a.active{background:var(--blue);color:#fff;border-color:var(--blue)}
@@ -121,53 +122,100 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 
 
 </nav></header><main><a class="back" href="/coc-cwl-public/tournaments">← Alle Turniere</a><h1>07/2025 · Meister 1</h1>
-<p class="intro">Quelle: <span class="badge">ClashSpot</span> ·
-Platzierung: 3 · Werte aus den Tagesübersichten.</p>
-<div class="tabs source-tabs"><a class="active" href="/coc-cwl-public/tournaments/82">ClashSpot</a></div><div class="tabs"><a class="active" href="/coc-cwl-public/tournaments/82/">Spieltage</a><a class="" href="/coc-cwl-public/tournaments/82/players/">Spieler-Gesamtwertung</a></div><section class="panel"><div class="scroll"><table>
-<thead><tr><th>Spieltag</th><th>Eigener Clan</th><th>Gegner</th>
-<th class="numeric">Eigene Sterne</th><th class="numeric">Gegnersterne</th>
-<th class="numeric">Eigene Zerstörung</th>
-<th class="numeric">Gegnerische Zerstörung</th><th>Ergebnis</th></tr></thead>
+<p class="intro">Platzierung: 3 · Werte aus den Tagesübersichten.</p>
+<div class="tabs"><a class="active" href="/coc-cwl-public/tournaments/82/">Spieltage</a><a class="" href="/coc-cwl-public/tournaments/82/players/">Spieler-Gesamtwertung</a></div><section class="panel tournament-days"><div class="scroll"><table>
+<thead><tr><th rowspan="2">Spieltag</th><th rowspan="2">Eigener Clan</th><th rowspan="2">Gegner</th>
+<th rowspan="2" class="numeric">Eigene Sterne</th><th rowspan="2" class="numeric">Gegnersterne</th>
+<th rowspan="2" class="numeric">Eigene Zerstörung</th>
+<th rowspan="2" class="numeric">Gegnerische Zerstörung</th><th rowspan="2">Ergebnis</th>
+<th colspan="7" class="group">Angriffe</th><th colspan="7" class="group">Verteidigungen</th></tr>
+<tr><th class="numeric group-start">Anzahl</th><th class="numeric">3</th><th class="numeric">2</th>
+<th class="numeric">1</th><th class="numeric">0</th><th class="numeric">Gesamtsterne</th>
+<th class="numeric">Gesamtzerstörung</th><th class="numeric group-start">Anzahl</th><th class="numeric">3</th>
+<th class="numeric">2</th><th class="numeric">1</th><th class="numeric">0</th><th class="numeric">Gesamtsterne</th>
+<th class="numeric">Gesamtzerstörung</th></tr></thead>
 <tbody><tr><td><a href="/coc-cwl-public/tournaments/82/days/1">Tag 1</a></td>
-<td>Ü30 Kriegs-Clan</td><td>∆lixil∆</td>
-<td class="numeric">37</td>
-<td class="numeric">39</td>
-<td class="numeric">93.47 %</td>
-<td class="numeric">96.67 %</td>
-<td><span class="outcome loss">Niederlage</span></td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/2">Tag 2</a></td>
-<td>Ü30 Kriegs-Clan</td><td>عراقي</td>
-<td class="numeric">34</td>
-<td class="numeric">34</td>
-<td class="numeric">92.00 %</td>
-<td class="numeric">88.87 %</td>
-<td><span class="outcome win">Sieg</span></td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/3">Tag 3</a></td>
 <td>Ü30 Kriegs-Clan</td><td>Dynasty 4EVER</td>
 <td class="numeric">34</td>
 <td class="numeric">34</td>
 <td class="numeric">89.07 %</td>
 <td class="numeric">87.93 %</td>
-<td><span class="outcome win">Sieg</span></td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/4">Tag 4</a></td>
+<td><span class="outcome win">Sieg</span></td>
+<td class="numeric group-start">15</td><td class="numeric">4</td>
+<td class="numeric">11</td><td class="numeric">0</td><td class="numeric">0</td>
+<td class="numeric">34</td><td class="numeric">1336.00 %</td>
+<td class="numeric group-start">15</td><td class="numeric">5</td>
+<td class="numeric">9</td><td class="numeric">1</td><td class="numeric">0</td>
+<td class="numeric">34</td><td class="numeric">1319.00 %</td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/2">Tag 2</a></td>
+<td>Ü30 Kriegs-Clan</td><td>عراقي</td>
+<td class="numeric">34</td>
+<td class="numeric">34</td>
+<td class="numeric">92.00 %</td>
+<td class="numeric">88.87 %</td>
+<td><span class="outcome win">Sieg</span></td>
+<td class="numeric group-start">15</td><td class="numeric">5</td>
+<td class="numeric">9</td><td class="numeric">1</td><td class="numeric">0</td>
+<td class="numeric">34</td><td class="numeric">1380.00 %</td>
+<td class="numeric group-start">15</td><td class="numeric">6</td>
+<td class="numeric">7</td><td class="numeric">2</td><td class="numeric">0</td>
+<td class="numeric">34</td><td class="numeric">1333.00 %</td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/3">Tag 3</a></td>
+<td>Ü30 Kriegs-Clan</td><td>∆lixil∆</td>
+<td class="numeric">37</td>
+<td class="numeric">39</td>
+<td class="numeric">93.47 %</td>
+<td class="numeric">96.67 %</td>
+<td><span class="outcome loss">Niederlage</span></td>
+<td class="numeric group-start">15</td><td class="numeric">7</td>
+<td class="numeric">8</td><td class="numeric">0</td><td class="numeric">0</td>
+<td class="numeric">37</td><td class="numeric">1402.00 %</td>
+<td class="numeric group-start">15</td><td class="numeric">10</td>
+<td class="numeric">4</td><td class="numeric">1</td><td class="numeric">0</td>
+<td class="numeric">39</td><td class="numeric">1450.00 %</td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/4">Tag 4</a></td>
 <td>Ü30 Kriegs-Clan</td><td>DIE LIGA 18+</td>
 <td class="numeric">38</td>
 <td class="numeric">30</td>
 <td class="numeric">94.07 %</td>
 <td class="numeric">82.47 %</td>
-<td><span class="outcome win">Sieg</span></td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/5">Tag 5</a></td>
+<td><span class="outcome win">Sieg</span></td>
+<td class="numeric group-start">15</td><td class="numeric">9</td>
+<td class="numeric">5</td><td class="numeric">1</td><td class="numeric">0</td>
+<td class="numeric">38</td><td class="numeric">1411.00 %</td>
+<td class="numeric group-start">14</td><td class="numeric">5</td>
+<td class="numeric">7</td><td class="numeric">1</td><td class="numeric">1</td>
+<td class="numeric">30</td><td class="numeric">1237.00 %</td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/5">Tag 5</a></td>
 <td>Ü30 Kriegs-Clan</td><td>Black Flag</td>
 <td class="numeric">34</td>
 <td class="numeric">31</td>
 <td class="numeric">86.27 %</td>
 <td class="numeric">81.67 %</td>
-<td><span class="outcome win">Sieg</span></td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/6">Tag 6</a></td>
+<td><span class="outcome win">Sieg</span></td>
+<td class="numeric group-start">15</td><td class="numeric">5</td>
+<td class="numeric">9</td><td class="numeric">1</td><td class="numeric">0</td>
+<td class="numeric">34</td><td class="numeric">1294.00 %</td>
+<td class="numeric group-start">15</td><td class="numeric">2</td>
+<td class="numeric">12</td><td class="numeric">1</td><td class="numeric">0</td>
+<td class="numeric">31</td><td class="numeric">1225.00 %</td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/6">Tag 6</a></td>
 <td>Ü30 Kriegs-Clan</td><td>✌✌NORTH LİONS ✌</td>
 <td class="numeric">37</td>
 <td class="numeric">26</td>
 <td class="numeric">92.00 %</td>
 <td class="numeric">71.20 %</td>
-<td><span class="outcome win">Sieg</span></td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/7">Tag 7</a></td>
+<td><span class="outcome win">Sieg</span></td>
+<td class="numeric group-start">15</td><td class="numeric">8</td>
+<td class="numeric">6</td><td class="numeric">1</td><td class="numeric">0</td>
+<td class="numeric">37</td><td class="numeric">1380.00 %</td>
+<td class="numeric group-start">13</td><td class="numeric">3</td>
+<td class="numeric">7</td><td class="numeric">3</td><td class="numeric">0</td>
+<td class="numeric">26</td><td class="numeric">1068.00 %</td></tr><tr><td><a href="/coc-cwl-public/tournaments/82/days/7">Tag 7</a></td>
 <td>Ü30 Kriegs-Clan</td><td>Clash Of Kings</td>
 <td class="numeric">35</td>
 <td class="numeric">37</td>
 <td class="numeric">92.07 %</td>
 <td class="numeric">92.73 %</td>
-<td><span class="outcome loss">Niederlage</span></td></tr></tbody></table></div></section></main></body></html>
+<td><span class="outcome loss">Niederlage</span></td>
+<td class="numeric group-start">15</td><td class="numeric">6</td>
+<td class="numeric">8</td><td class="numeric">1</td><td class="numeric">0</td>
+<td class="numeric">35</td><td class="numeric">1381.00 %</td>
+<td class="numeric group-start">15</td><td class="numeric">7</td>
+<td class="numeric">8</td><td class="numeric">0</td><td class="numeric">0</td>
+<td class="numeric">37</td><td class="numeric">1391.00 %</td></tr></tbody></table></div></section></main></body></html>
