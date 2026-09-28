@@ -1,6 +1,6 @@
 <!doctype html><html lang="de"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>06/2026 · Liga unbekannt · CWL Analyzer</title><style>
+<title>06/2026 · Meister 1 · CWL Analyzer</title><style>
 :root{color-scheme:light;--nav:#17233d;--blue:#275d96;--line:#dce3ec;
 --muted:#66758a;--bg:#f4f7fa;--up:#16834b;--down:#c83e3e}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#17233d;
@@ -43,6 +43,14 @@ box-shadow:1px 0 var(--line);z-index:1}
 border-radius:50%;font-weight:900}
 .movement.same{color:#7b8796;background:#edf0f3}.movement.up{color:var(--up);
 background:#e6f5ec}.movement.down{color:var(--down);background:#fdeaea}
+.stats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;
+margin:0 0 18px}.stats-grid .panel h2{margin:0;padding:14px 16px;
+font-size:17px;border-bottom:1px solid var(--line)}.stats-grid table th,
+.stats-grid table td{padding:9px 13px}.stats-grid table th{text-align:left}
+.tournament-players th.group{padding-top:10px;padding-bottom:10px;text-align:center;
+border-left:2px solid #b8c7d8;border-bottom:2px solid #9db1c6;background:#e8f4f1;
+color:#28675d}.tournament-players th.group-start,
+.tournament-players td.group-start{border-left:2px solid #b8c7d8}
 .tabs{display:flex;gap:8px;margin:0 0 18px}.tabs a{padding:8px 14px;
 border:1px solid var(--line);background:#fff;border-radius:7px;text-decoration:none}
 .tabs a.active{background:var(--blue);color:#fff;border-color:var(--blue)}
@@ -103,7 +111,7 @@ border-radius:6px;padding:9px 11px;font:inherit;resize:vertical}.wide{grid-colum
 flex-direction:column}.filter-actions{align-items:stretch;flex-wrap:wrap}
 .column-menu{left:0;right:auto;grid-template-columns:1fr;width:min(420px,calc(100vw - 40px));
 max-height:60vh;overflow:auto}input{min-width:0;width:100%}h1{font-size:25px}
-.comparison-summary{grid-template-columns:repeat(2,1fr)}}
+.comparison-summary{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.form-grid{grid-template-columns:1fr}.toolbar form{align-items:stretch;
 flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;gap:4px}}
 </style></head>
@@ -112,9 +120,9 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <a class="" href="/coc-cwl-public/players">Spieler</a>
 
 
-</nav></header><main><a class="back" href="/coc-cwl-public/tournaments">← Alle Turniere</a><h1>06/2026 · Liga unbekannt</h1>
+</nav></header><main><a class="back" href="/coc-cwl-public/tournaments">← Alle Turniere</a><h1>06/2026 · Meister 1</h1>
 <p class="intro">Quelle: <span class="badge">ClashSpot</span> ·
-Platzierung: – · Werte aus den Tagesübersichten.</p>
+Platzierung: 2 · Werte aus den Tagesübersichten.</p>
 <div class="tabs source-tabs"><a class="active" href="/coc-cwl-public/tournaments/93">ClashSpot</a></div><div class="tabs"><a class="active" href="/coc-cwl-public/tournaments/93/">Spieltage</a><a class="" href="/coc-cwl-public/tournaments/93/players/">Spieler-Gesamtwertung</a></div><section class="panel"><div class="scroll"><table>
 <thead><tr><th>Spieltag</th><th>Eigener Clan</th><th>Gegner</th>
 <th class="numeric">Eigene Sterne</th><th class="numeric">Gegnersterne</th>
