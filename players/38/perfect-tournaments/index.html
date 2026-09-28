@@ -49,7 +49,27 @@ border:1px solid var(--line);background:#fff;border-radius:7px;text-decoration:n
 .badge{display:inline-block;border-radius:999px;background:#e8f0fa;
 padding:3px 8px;font-size:12px}.muted{color:var(--muted)}.empty{padding:30px;
 text-align:center;color:var(--muted)}.back{display:inline-block;margin-bottom:16px}
-.group{background:#dde8f3;text-align:center!important}.warning{color:#9a5a00}
+.comparison-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+margin:0 0 18px}.comparison-card{background:#fff;border:1px solid var(--line);
+border-radius:10px;padding:14px 16px}.comparison-card strong{display:block;
+font-size:24px}.comparison-card span{color:var(--muted);font-size:13px}
+.compare-filter{display:flex;gap:10px;align-items:center;margin:0 0 18px}
+.button.secondary{background:#fff;color:var(--blue);border:1px solid var(--line)}
+.button.secondary.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.compare-ok{color:var(--up)}.compare-details summary{cursor:pointer;font-weight:650}
+.compare-details table{margin-top:10px;font-size:13px}.compare-details th,
+.compare-details td{padding:7px 9px}.compare-details pre{white-space:pre-wrap}
+.players-scroll thead .group{padding-top:10px;padding-bottom:10px;text-align:center!important;
+border-left:2px solid #b8c7d8;border-bottom:2px solid #9db1c6}
+.players-scroll thead .group[data-column-group="participation"]{
+background:#e6eef8;color:#315a83;border-bottom-color:#8eaccb}
+.players-scroll thead .group[data-column-group="attack"]{
+background:#e8f4f1;color:#28675d;border-bottom-color:#8fc6ba}
+.players-scroll thead .group[data-column-group="defense"]{
+background:#f6eee3;color:#805b2c;border-bottom-color:#d5b481}
+.players-scroll thead tr:nth-child(2) th.group-start,
+.players-scroll tbody td.group-start{border-left:2px solid #b8c7d8}
+.warning{color:#9a5a00}
 .perfect-list{max-width:900px}.perfect-list td:first-child{font-weight:700}
 .outcome{font-weight:800}.outcome.win{color:var(--up)}
 .outcome.loss{color:var(--down)}.outcome.draw,.outcome.unknown{color:#7b8796}
@@ -82,7 +102,8 @@ border-radius:6px;padding:9px 11px;font:inherit;resize:vertical}.wide{grid-colum
 .brand{margin-right:5px}nav a{padding:19px 8px}.toolbar{align-items:stretch;
 flex-direction:column}.filter-actions{align-items:stretch;flex-wrap:wrap}
 .column-menu{left:0;right:auto;grid-template-columns:1fr;width:min(420px,calc(100vw - 40px));
-max-height:60vh;overflow:auto}input{min-width:0;width:100%}h1{font-size:25px}}
+max-height:60vh;overflow:auto}input{min-width:0;width:100%}h1{font-size:25px}
+.comparison-summary{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.form-grid{grid-template-columns:1fr}.toolbar form{align-items:stretch;
 flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;gap:4px}}
 </style></head>
@@ -90,9 +111,11 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <a class="" href="/coc-cwl-public/tournaments">Turniere</a>
 <a class="active" href="/coc-cwl-public/players">Spieler</a>
 
+
 </nav></header><main><a class="back" href="/coc-cwl-public/players">← Spielerstatistik</a>
 <h1>Perfekte Turniere: TH 8 SmasheR</h1>
-<p class="intro">Teilnahme an allen Spieltagen und ausschließlich Angriffe mit drei Sternen.</p>
+<p class="intro">Quelle: <span class="badge">ClashSpot</span> ·
+Teilnahme an allen Spieltagen und ausschließlich Angriffe mit drei Sternen.</p>
 <section class="panel perfect-list"><table><thead><tr><th>Turnier</th>
 <th>Liga</th><th class="numeric">Platzierung</th></tr></thead>
 <tbody><tr><td class="empty" colspan="3">Keine perfekten Turniere gefunden.</td></tr></tbody></table></section></main></body></html>

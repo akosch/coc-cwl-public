@@ -1,0 +1,122 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spieltag 7 · CWL Analyzer</title><style>
+:root{color-scheme:light;--nav:#17233d;--blue:#275d96;--line:#dce3ec;
+--muted:#66758a;--bg:#f4f7fa;--up:#16834b;--down:#c83e3e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#17233d;
+font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+[hidden]{display:none!important}
+body.players-page{height:100vh;overflow:hidden;display:flex;flex-direction:column}
+body.players-page header{flex:none}body.players-page main{flex:1;min-height:0;
+display:flex;flex-direction:column;overflow:hidden;width:100%;max-width:none;
+margin:18px 0;padding:0 20px}
+body.players-page h1,body.players-page .intro{flex:none}
+body.players-page .panel{flex:1;min-height:0;display:flex;flex-direction:column}
+body.players-page .toolbar{flex:none}
+header{background:var(--nav);color:#fff}nav{
+display:flex;align-items:center;gap:8px;padding:0 20px}.brand{font-weight:800;
+font-size:18px;margin-right:28px;padding:18px 0}nav a{color:#dce7f7;
+text-decoration:none;padding:19px 16px;border-bottom:3px solid transparent}
+nav a:hover,nav a.active{color:#fff;border-color:#58a6ff}
+main{width:calc(100% - 40px);max-width:1180px;margin:24px auto;padding:0}h1{font-size:30px;
+margin:0 0 6px}.intro{color:var(--muted);margin:0 0 24px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;
+box-shadow:0 2px 8px #17304f0a;overflow:hidden}.toolbar{display:flex;
+justify-content:space-between;gap:16px;align-items:end;padding:16px 18px;
+border-bottom:1px solid var(--line)}label{font-weight:650}input{display:block;
+margin-top:5px;border:1px solid #b9c5d3;border-radius:6px;padding:9px 11px;
+min-width:250px}table{width:100%;border-collapse:collapse}th{background:#eef3f8;
+color:#42536b;font-size:12px;text-transform:uppercase;letter-spacing:.035em;
+text-align:left;white-space:nowrap}th,td{padding:11px 13px;
+border-bottom:1px solid var(--line)}tbody tr:hover{background:#f8fbff}
+a{color:#175f9f}th a{color:inherit;text-decoration:none}.numeric{text-align:right}
+.scroll{overflow:auto}.players-scroll{flex:1;min-height:0;max-height:none;
+scrollbar-gutter:stable both-edges}.players-scroll thead th{
+position:sticky;top:0;z-index:2}.players-scroll thead tr:first-child th{top:0}
+.players-scroll thead tr:nth-child(2) th{top:39px}.players-scroll th a{
+display:inline-block;white-space:nowrap}.sticky{position:sticky;left:0;
+box-shadow:1px 0 var(--line);z-index:1}
+.players-scroll thead .sticky{background:#eef3f8;z-index:4}
+.players-scroll tbody .sticky{background:#fff}
+.players-scroll tbody tr:hover .sticky{background:#f8fbff}
+.movement{display:inline-grid;place-items:center;width:25px;height:25px;
+border-radius:50%;font-weight:900}
+.movement.same{color:#7b8796;background:#edf0f3}.movement.up{color:var(--up);
+background:#e6f5ec}.movement.down{color:var(--down);background:#fdeaea}
+.tabs{display:flex;gap:8px;margin:0 0 18px}.tabs a{padding:8px 14px;
+border:1px solid var(--line);background:#fff;border-radius:7px;text-decoration:none}
+.tabs a.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.badge{display:inline-block;border-radius:999px;background:#e8f0fa;
+padding:3px 8px;font-size:12px}.muted{color:var(--muted)}.empty{padding:30px;
+text-align:center;color:var(--muted)}.back{display:inline-block;margin-bottom:16px}
+.comparison-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+margin:0 0 18px}.comparison-card{background:#fff;border:1px solid var(--line);
+border-radius:10px;padding:14px 16px}.comparison-card strong{display:block;
+font-size:24px}.comparison-card span{color:var(--muted);font-size:13px}
+.compare-filter{display:flex;gap:10px;align-items:center;margin:0 0 18px}
+.button.secondary{background:#fff;color:var(--blue);border:1px solid var(--line)}
+.button.secondary.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.compare-ok{color:var(--up)}.compare-details summary{cursor:pointer;font-weight:650}
+.compare-details table{margin-top:10px;font-size:13px}.compare-details th,
+.compare-details td{padding:7px 9px}.compare-details pre{white-space:pre-wrap}
+.players-scroll thead .group{padding-top:10px;padding-bottom:10px;text-align:center!important;
+border-left:2px solid #b8c7d8;border-bottom:2px solid #9db1c6}
+.players-scroll thead .group[data-column-group="participation"]{
+background:#e6eef8;color:#315a83;border-bottom-color:#8eaccb}
+.players-scroll thead .group[data-column-group="attack"]{
+background:#e8f4f1;color:#28675d;border-bottom-color:#8fc6ba}
+.players-scroll thead .group[data-column-group="defense"]{
+background:#f6eee3;color:#805b2c;border-bottom-color:#d5b481}
+.players-scroll thead tr:nth-child(2) th.group-start,
+.players-scroll tbody td.group-start{border-left:2px solid #b8c7d8}
+.warning{color:#9a5a00}
+.perfect-list{max-width:900px}.perfect-list td:first-child{font-weight:700}
+.outcome{font-weight:800}.outcome.win{color:var(--up)}
+.outcome.loss{color:var(--down)}.outcome.draw,.outcome.unknown{color:#7b8796}
+.filter-actions{display:flex;align-items:end;gap:10px}.column-picker{position:relative}
+.column-picker summary{cursor:pointer;border:1px solid #b9c5d3;border-radius:6px;
+padding:9px 12px;background:#fff;font-weight:650;white-space:nowrap}
+.column-menu{position:absolute;right:0;top:calc(100% + 7px);z-index:10;
+display:grid;grid-template-columns:repeat(3,minmax(190px,1fr));gap:12px;
+width:min(760px,calc(100vw - 60px));padding:14px;background:#fff;
+border:1px solid var(--line);border-radius:8px;box-shadow:0 10px 30px #17233d26}
+.column-menu fieldset{margin:0;border:1px solid var(--line);border-radius:6px}
+.column-menu legend{font-weight:750}.column-menu label{display:flex;
+align-items:center;gap:7px;margin:6px 0;font-weight:400;white-space:nowrap}
+.column-menu input{display:inline;width:auto;min-width:0;margin:0}
+button,.button{border:0;border-radius:6px;padding:9px 14px;background:var(--blue);
+color:#fff;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;
+display:inline-block}.toolbar form{display:flex;align-items:end;gap:10px}
+.row-actions,.form-actions{display:flex;align-items:center;gap:14px}
+.danger-link{color:var(--down)}.danger-button{background:var(--down)}
+.form-card{max-width:900px;padding:22px;overflow:visible}.form-card h2{margin-top:0}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:18px}
+.form-grid label{display:block}.form-grid input,.form-grid textarea{width:100%;
+min-width:0}.form-grid textarea{display:block;margin-top:5px;border:1px solid #b9c5d3;
+border-radius:6px;padding:9px 11px;font:inherit;resize:vertical}.wide{grid-column:1/-1}
+.form-actions{margin-top:24px}.notice,.error{padding:12px 15px;border-radius:7px}
+.notice{color:#11663a;background:#e6f5ec;border:1px solid #b9e1c8}
+.error{color:#8f2525;background:#fdeaea;border:1px solid #efbcbc}
+.admin-tabs{margin-bottom:20px}
+@media(max-width:700px){main{padding:0 12px;margin-top:20px}nav{padding:0 12px}
+.brand{margin-right:5px}nav a{padding:19px 8px}.toolbar{align-items:stretch;
+flex-direction:column}.filter-actions{align-items:stretch;flex-wrap:wrap}
+.column-menu{left:0;right:auto;grid-template-columns:1fr;width:min(420px,calc(100vw - 40px));
+max-height:60vh;overflow:auto}input{min-width:0;width:100%}h1{font-size:25px}
+.comparison-summary{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.form-grid{grid-template-columns:1fr}.toolbar form{align-items:stretch;
+flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;gap:4px}}
+</style></head>
+<body class=""><header><nav><span class="brand">CWL Analyzer</span>
+<a class="active" href="/coc-cwl-public/tournaments">Turniere</a>
+<a class="" href="/coc-cwl-public/players">Spieler</a>
+
+
+</nav></header><main><a class="back" href="/coc-cwl-public/tournaments/96">← Spieltage</a>
+<h1>Tag 7: Ü30 Kriegs-Clan gegen xMaBaNgiSx</h1>
+<p class="intro">08/2023 ·
+Quelle: <span class="badge">ClashSpot</span> ·
+Meister 1</p>
+<div class="tabs"><a class="" href="/coc-cwl-public/tournaments/96/days/7/">Alle</a><a class="active" href="/coc-cwl-public/tournaments/96/days/7/attacks/">Angriffe</a><a class="" href="/coc-cwl-public/tournaments/96/days/7/defenses/">Verteidigungen</a></div><section class="panel"><div class="scroll"><table>
+<thead><tr><th>Rang</th><th>Spieler</th><th class="group">Angriffsziel</th><th class="group">Angriff Sterne</th><th class="group">Angriff Zerstörung</th></tr></thead><tbody><tr><td>1</td><td>dom</td><td>6</td><td>2</td><td>75.00 %</td></tr><tr><td>2</td><td>akosch</td><td>–</td><td>–</td><td>–</td></tr><tr><td>3</td><td>Bullmutzen</td><td>4</td><td>2</td><td>63.00 %</td></tr><tr><td>4</td><td>McWüterich</td><td>8</td><td>2</td><td>58.00 %</td></tr><tr><td>5</td><td>Hiha</td><td>5</td><td>2</td><td>63.00 %</td></tr><tr><td>6</td><td>booni</td><td>15</td><td>2</td><td>55.00 %</td></tr><tr><td>7</td><td>Ace</td><td>7</td><td>2</td><td>77.00 %</td></tr><tr><td>8</td><td>Bumsgott</td><td>1</td><td>2</td><td>62.00 %</td></tr><tr><td>9</td><td>Hinkebein</td><td>13</td><td>2</td><td>60.00 %</td></tr><tr><td>10</td><td>xIPaiINFC2013</td><td>9</td><td>2</td><td>59.00 %</td></tr><tr><td>11</td><td>MongoOtto</td><td>3</td><td>2</td><td>83.00 %</td></tr><tr><td>12</td><td>Brömme</td><td>12</td><td>2</td><td>60.00 %</td></tr><tr><td>13</td><td>jubasniper</td><td>10</td><td>2</td><td>78.00 %</td></tr><tr><td>14</td><td>kona</td><td>14</td><td>1</td><td>49.00 %</td></tr><tr><td>15</td><td>Highlander</td><td>11</td><td>2</td><td>90.00 %</td></tr></tbody>
+</table></div></section></main></body></html>
