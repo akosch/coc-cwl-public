@@ -52,6 +52,7 @@ border-left:2px solid #b8c7d8;border-bottom:2px solid #9db1c6;background:#e8f4f1
 color:#28675d}.tournament-players th.group-start,
 .tournament-players td.group-start,.tournament-days th.group-start,
 .tournament-days td.group-start{border-left:2px solid #b8c7d8}
+.day-results{margin-top:18px}
 .tabs{display:flex;gap:8px;margin:0 0 18px}.tabs a{padding:8px 14px;
 border:1px solid var(--line);background:#fff;border-radius:7px;text-decoration:none}
 .tabs a.active{background:var(--blue);color:#fff;border-color:var(--blue)}
@@ -125,14 +126,14 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <p class="intro">Platzierung: 5 · Angriffs- und Verteidigungsdaten dieses Turniers, einschließlich der Verteilung nach Sternzahl.</p>
 <div class="tabs"><a class="" href="/coc-cwl-public/tournaments/100/">Spieltage</a><a class="active" href="/coc-cwl-public/tournaments/100/players/">Spieler-Gesamtwertung</a></div><section class="panel tournament-players"><div class="scroll"><table>
 <thead><tr><th rowspan="2">Platz</th><th rowspan="2">Spieler</th>
-<th colspan="7" class="group">Angriffe</th>
-<th colspan="7" class="group">Verteidigungen</th></tr>
+<th colspan="8" class="group">Angriffe</th>
+<th colspan="8" class="group">Verteidigungen</th></tr>
 <tr><th class="numeric group-start">Anzahl</th><th class="numeric">3</th>
 <th class="numeric">2</th><th class="numeric">1</th><th class="numeric">0</th>
-<th class="numeric">Gesamtsterne</th><th class="numeric">Gesamtzerstörung</th>
+<th class="numeric">Sterne</th><th class="numeric">% Gesamt</th><th class="numeric">% Schnitt</th>
 <th class="numeric group-start">Anzahl</th><th class="numeric">3</th>
 <th class="numeric">2</th><th class="numeric">1</th><th class="numeric">0</th>
-<th class="numeric">Gesamtsterne</th><th class="numeric">Gesamtzerstörung</th></tr></thead>
+<th class="numeric">Sterne</th><th class="numeric">% Gesamt</th><th class="numeric">% Schnitt</th></tr></thead>
 <tbody><tr><td>1</td><td>Dsf@nrw</td>
 <td class="numeric group-start">6</td>
 <td class="numeric">1</td>
@@ -141,13 +142,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">13</td>
 <td class="numeric">461.00 %</td>
+<td class="numeric">76.83 %</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">0</td>
 <td class="numeric">5</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">10</td>
-<td class="numeric">365.00 %</td></tr><tr><td>2</td><td>PcTheo</td>
+<td class="numeric">365.00 %</td>
+<td class="numeric">73.00 %</td></tr><tr><td>2</td><td>PcTheo</td>
 <td class="numeric group-start">6</td>
 <td class="numeric">1</td>
 <td class="numeric">5</td>
@@ -155,13 +158,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">13</td>
 <td class="numeric">457.00 %</td>
+<td class="numeric">76.17 %</td>
 <td class="numeric group-start">7</td>
 <td class="numeric">2</td>
 <td class="numeric">5</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">16</td>
-<td class="numeric">564.00 %</td></tr><tr><td>3</td><td>rj</td>
+<td class="numeric">564.00 %</td>
+<td class="numeric">80.57 %</td></tr><tr><td>3</td><td>rj</td>
 <td class="numeric group-start">6</td>
 <td class="numeric">0</td>
 <td class="numeric">6</td>
@@ -169,13 +174,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">12</td>
 <td class="numeric">489.00 %</td>
+<td class="numeric">81.50 %</td>
 <td class="numeric group-start">7</td>
 <td class="numeric">1</td>
 <td class="numeric">6</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">15</td>
-<td class="numeric">565.00 %</td></tr><tr><td>4</td><td>vezen</td>
+<td class="numeric">565.00 %</td>
+<td class="numeric">80.71 %</td></tr><tr><td>4</td><td>vezen</td>
 <td class="numeric group-start">6</td>
 <td class="numeric">0</td>
 <td class="numeric">6</td>
@@ -183,13 +190,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">12</td>
 <td class="numeric">432.00 %</td>
+<td class="numeric">72.00 %</td>
 <td class="numeric group-start">7</td>
 <td class="numeric">1</td>
 <td class="numeric">6</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">15</td>
-<td class="numeric">528.00 %</td></tr><tr><td>5</td><td>dpendzich</td>
+<td class="numeric">528.00 %</td>
+<td class="numeric">75.43 %</td></tr><tr><td>5</td><td>dpendzich</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">2</td>
 <td class="numeric">3</td>
@@ -197,13 +206,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">12</td>
 <td class="numeric">431.00 %</td>
+<td class="numeric">86.20 %</td>
 <td class="numeric group-start">6</td>
 <td class="numeric">0</td>
 <td class="numeric">4</td>
 <td class="numeric">2</td>
 <td class="numeric">0</td>
 <td class="numeric">10</td>
-<td class="numeric">389.00 %</td></tr><tr><td>6</td><td>dom</td>
+<td class="numeric">389.00 %</td>
+<td class="numeric">64.83 %</td></tr><tr><td>6</td><td>dom</td>
 <td class="numeric group-start">6</td>
 <td class="numeric">0</td>
 <td class="numeric">6</td>
@@ -211,13 +222,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">12</td>
 <td class="numeric">400.00 %</td>
+<td class="numeric">66.67 %</td>
 <td class="numeric group-start">7</td>
 <td class="numeric">0</td>
 <td class="numeric">6</td>
 <td class="numeric">1</td>
 <td class="numeric">0</td>
 <td class="numeric">13</td>
-<td class="numeric">604.00 %</td></tr><tr><td>7</td><td>kona</td>
+<td class="numeric">604.00 %</td>
+<td class="numeric">86.29 %</td></tr><tr><td>7</td><td>kona</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">2</td>
 <td class="numeric">3</td>
@@ -225,13 +238,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">12</td>
 <td class="numeric">387.00 %</td>
+<td class="numeric">77.40 %</td>
 <td class="numeric group-start">4</td>
 <td class="numeric">0</td>
 <td class="numeric">3</td>
 <td class="numeric">1</td>
 <td class="numeric">0</td>
 <td class="numeric">7</td>
-<td class="numeric">268.00 %</td></tr><tr><td>8</td><td>McWüterich</td>
+<td class="numeric">268.00 %</td>
+<td class="numeric">67.00 %</td></tr><tr><td>8</td><td>McWüterich</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">1</td>
 <td class="numeric">4</td>
@@ -239,13 +254,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">11</td>
 <td class="numeric">415.00 %</td>
+<td class="numeric">83.00 %</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">0</td>
 <td class="numeric">4</td>
 <td class="numeric">1</td>
 <td class="numeric">0</td>
 <td class="numeric">9</td>
-<td class="numeric">282.00 %</td></tr><tr><td>9</td><td>General Lee</td>
+<td class="numeric">282.00 %</td>
+<td class="numeric">56.40 %</td></tr><tr><td>9</td><td>General Lee</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">1</td>
 <td class="numeric">4</td>
@@ -253,13 +270,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">11</td>
 <td class="numeric">354.00 %</td>
+<td class="numeric">70.80 %</td>
 <td class="numeric group-start">6</td>
 <td class="numeric">1</td>
 <td class="numeric">5</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">13</td>
-<td class="numeric">505.00 %</td></tr><tr><td>10</td><td>akosch</td>
+<td class="numeric">505.00 %</td>
+<td class="numeric">84.17 %</td></tr><tr><td>10</td><td>akosch</td>
 <td class="numeric group-start">6</td>
 <td class="numeric">0</td>
 <td class="numeric">4</td>
@@ -267,13 +286,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">10</td>
 <td class="numeric">405.00 %</td>
+<td class="numeric">67.50 %</td>
 <td class="numeric group-start">7</td>
 <td class="numeric">1</td>
 <td class="numeric">6</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">15</td>
-<td class="numeric">574.00 %</td></tr><tr><td>11</td><td>Marcus</td>
+<td class="numeric">574.00 %</td>
+<td class="numeric">82.00 %</td></tr><tr><td>11</td><td>Marcus</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">0</td>
 <td class="numeric">5</td>
@@ -281,13 +302,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">10</td>
 <td class="numeric">356.00 %</td>
+<td class="numeric">71.20 %</td>
 <td class="numeric group-start">6</td>
 <td class="numeric">1</td>
 <td class="numeric">4</td>
 <td class="numeric">1</td>
 <td class="numeric">0</td>
 <td class="numeric">12</td>
-<td class="numeric">471.00 %</td></tr><tr><td>12</td><td>Max</td>
+<td class="numeric">471.00 %</td>
+<td class="numeric">78.50 %</td></tr><tr><td>12</td><td>Max</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">0</td>
 <td class="numeric">4</td>
@@ -295,13 +318,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">9</td>
 <td class="numeric">378.00 %</td>
+<td class="numeric">75.60 %</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">1</td>
 <td class="numeric">4</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">11</td>
-<td class="numeric">417.00 %</td></tr><tr><td>13</td><td>phil</td>
+<td class="numeric">417.00 %</td>
+<td class="numeric">83.40 %</td></tr><tr><td>13</td><td>phil</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">0</td>
 <td class="numeric">4</td>
@@ -309,13 +334,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">9</td>
 <td class="numeric">344.00 %</td>
+<td class="numeric">68.80 %</td>
 <td class="numeric group-start">7</td>
 <td class="numeric">1</td>
 <td class="numeric">6</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">15</td>
-<td class="numeric">564.00 %</td></tr><tr><td>14</td><td>Lifehouse</td>
+<td class="numeric">564.00 %</td>
+<td class="numeric">80.57 %</td></tr><tr><td>14</td><td>Lifehouse</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">0</td>
 <td class="numeric">4</td>
@@ -323,13 +350,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">1</td>
 <td class="numeric">8</td>
 <td class="numeric">351.00 %</td>
+<td class="numeric">70.20 %</td>
 <td class="numeric group-start">4</td>
 <td class="numeric">0</td>
 <td class="numeric">4</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">8</td>
-<td class="numeric">255.00 %</td></tr><tr><td>15</td><td>Norin Radd</td>
+<td class="numeric">255.00 %</td>
+<td class="numeric">63.75 %</td></tr><tr><td>15</td><td>Norin Radd</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">0</td>
 <td class="numeric">3</td>
@@ -337,13 +366,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">8</td>
 <td class="numeric">318.00 %</td>
+<td class="numeric">63.60 %</td>
 <td class="numeric group-start">5</td>
 <td class="numeric">0</td>
 <td class="numeric">4</td>
 <td class="numeric">1</td>
 <td class="numeric">0</td>
 <td class="numeric">9</td>
-<td class="numeric">319.00 %</td></tr><tr><td>16</td><td>Heinerhelgo</td>
+<td class="numeric">319.00 %</td>
+<td class="numeric">63.80 %</td></tr><tr><td>16</td><td>Heinerhelgo</td>
 <td class="numeric group-start">3</td>
 <td class="numeric">1</td>
 <td class="numeric">2</td>
@@ -351,13 +382,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">7</td>
 <td class="numeric">219.00 %</td>
+<td class="numeric">73.00 %</td>
 <td class="numeric group-start">3</td>
 <td class="numeric">1</td>
 <td class="numeric">2</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">7</td>
-<td class="numeric">264.00 %</td></tr><tr><td>17</td><td>lbrainy84</td>
+<td class="numeric">264.00 %</td>
+<td class="numeric">88.00 %</td></tr><tr><td>17</td><td>lbrainy84</td>
 <td class="numeric group-start">2</td>
 <td class="numeric">0</td>
 <td class="numeric">2</td>
@@ -365,13 +398,15 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">4</td>
 <td class="numeric">158.00 %</td>
+<td class="numeric">79.00 %</td>
 <td class="numeric group-start">3</td>
 <td class="numeric">1</td>
 <td class="numeric">2</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">7</td>
-<td class="numeric">205.00 %</td></tr><tr><td>18</td><td>Boller :-)</td>
+<td class="numeric">205.00 %</td>
+<td class="numeric">68.33 %</td></tr><tr><td>18</td><td>Boller :-)</td>
 <td class="numeric group-start">2</td>
 <td class="numeric">0</td>
 <td class="numeric">1</td>
@@ -379,10 +414,12 @@ flex-direction:column}.row-actions{flex-direction:column;align-items:flex-start;
 <td class="numeric">0</td>
 <td class="numeric">3</td>
 <td class="numeric">159.00 %</td>
+<td class="numeric">79.50 %</td>
 <td class="numeric group-start">2</td>
 <td class="numeric">1</td>
 <td class="numeric">1</td>
 <td class="numeric">0</td>
 <td class="numeric">0</td>
 <td class="numeric">5</td>
-<td class="numeric">197.00 %</td></tr></tbody></table></div></section></main></body></html>
+<td class="numeric">197.00 %</td>
+<td class="numeric">98.50 %</td></tr></tbody></table></div></section></main></body></html>
